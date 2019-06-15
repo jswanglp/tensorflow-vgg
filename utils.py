@@ -38,7 +38,7 @@ def print_prob(prob, file_path):
     # Get top5 label
     top5 = [(synset[pred[i]], prob[pred[i]]) for i in range(5)]
     print(("Top5: ", top5))
-    return top1
+    return top1, prob[pred[0]]
 
 
 def load_image2(path, height=None, width=None):
